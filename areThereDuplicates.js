@@ -27,4 +27,12 @@ function areThereDuplicates(...args) {
     return false
   }
 
-  console.log(areThereDuplicates(1,2,4,3) )// true )
+  //An easier way to do this problem is the One Liner Solution
+  function areThereDuplicatesLinear() {
+    //this code uses the Set method that takes an array and creates a new array with only unique values. So it basically removes duplicates
+    //then this code compares the length of the new array that was created with the Set method and the array that was given to us
+    //if the both arrays length is the same then there isn't any duplicates and it returns false but if there is duplicates so the two arrays length aren't the same so it returns true
+    return new Set(arguments).size !== arguments.length;
+  }
+
+  console.log(areThereDuplicatesLinear(1,2,4,3,3) )// true )
